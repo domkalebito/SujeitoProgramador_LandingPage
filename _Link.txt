@@ -6,3 +6,26 @@ Animações -> eshttps://michalsnik.github.io/aos/
 Criando landing page completa do ZERO - part 01 (HTML, CSS, SASS)
   https://www.youtube.com/watch?v=Fzc_dnqD-V0&t=179s
 
+
+
+
+Site de Hospedagem https://vercel.com/domkalebitos-projects/sujeito-programador-landing-page
+https://sujeito-programador-landing-page.vercel.app/
+
+
+
+
+Comandos usados no Git e GitHub
+
+https://sujeitoprogramador.com/github-aula7/
+
+  Comandos Git:
+    Criando um repositório    git init    
+    Verificando alterações    git status  
+    Salvando arquivos         git add .   
+    Comitando arquivos        git commit -m "Alteração 3 | Ver 1.3 | Modifiquei a lista de usuários"
+
+	GitHub
+	  Define o nome principal   git branch -M main
+    Linkar com a nuvem        git remote add origin https://github.com/domkalebito/SujeitoProgramador_LandingPage.git
+    Envia o projeto           git push -u origin main
