@@ -1,0 +1,105 @@
+header{
+  width: 100%;
+}
+
+.header-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+  // border: 1px solid blue;
+}
+
+.header-icons{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-icons i{
+  color: $white-normal;
+  transition: color 0.3s ease-in-out;
+}
+
+.header-icons a:hover{
+  i{
+    color: $red-normal;
+    animation: anime_translateY 0.3s infinite alternate;
+  }
+}
+
+@keyframes anime_translateY{
+  from{
+    transform: translateY(0) scale(1);
+  } 
+  to{
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+.header-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.header-button{
+  border: 1px solid $white-normal;
+  padding: 8px 24px;
+  border-radius: 5px;
+  color: $white-normal;
+  transition: all 0.3s;
+}
+
+.header-button:hover{
+  animation: anime_button 0.3s infinite alternate;
+}
+
+@keyframes anime_button{
+  from{
+    border: 1px solid $white-normal;
+    color: $white-normal;
+  }
+  to{
+    border: 1px solid $red-normal;
+    color: $red-normal;
+    box-shadow: 0px 0px 16px 1px $red-normal;
+    text-shadow: 0px 0px 16px $red-normal;
+  }
+}
+
+
+// MOBILE SCREEN -> IPAD PRO OU TABLET PRO
+@media screen and (max-width: 1024px){
+  .header-content{
+    padding-inline: 2rem;
+  }
+}
+
+// MOBILE SCREEN -> IPAD OU TABLET
+@media screen and (max-width: 768px){
+  .header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .header-icons{
+  //   border: 1px solid red;
+  // }
+
+  .header-icons i{
+    font-size: 2.5rem;
+  }
+
+  .header-logo img{
+    width: 160px;
+    margin-top: 2rem;
+    // border: 1px solid red;
+  }
+
+  .header-button{
+    display: none;
+  }
+}

@@ -1,0 +1,521 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-icons i {
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.header-icons a:hover i {
+  color: #D94140;
+  animation: anime_translateY 0.3s infinite alternate;
+}
+
+@keyframes anime_translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-button {
+  border: 1px solid #fff;
+  padding: 8px 24px;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.header-button:hover {
+  animation: anime_button 0.3s infinite alternate;
+}
+
+@keyframes anime_button {
+  from {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  to {
+    border: 1px solid #D94140;
+    color: #D94140;
+    box-shadow: 0px 0px 16px 1px #D94140;
+    text-shadow: 0px 0px 16px #D94140;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header-content {
+    padding-inline: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-icons i {
+    font-size: 2.5rem;
+  }
+  .header-logo img {
+    width: 160px;
+    margin-top: 2rem;
+  }
+  .header-button {
+    display: none;
+  }
+}
+.container {
+  max-width: 1280px;
+  padding-inline: 1rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  height: 100vh;
+  width: 100%;
+  z-index: 99;
+  background-color: white;
+}
+
+.bg-home {
+  position: relative;
+}
+
+.bg-home::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/bg.svg");
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 1;
+}
+
+.hero {
+  color: #fff;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.hero h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 768px;
+  font-size: 28px;
+}
+.hero p {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.button-contact {
+  padding: 14px 28px;
+  color: #fff;
+  background-color: #D94140;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.button-contact:hover {
+  animation: anime_ButtonContact 0.3s infinite alternate;
+}
+
+@keyframes anime_ButtonContact {
+  to {
+    color: #fff;
+    box-shadow: 0px 0px 16px 1px #D94140;
+    text-shadow: 0px 0px 16px #fff;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hero {
+    min-height: 60vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: 24px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .hero p {
+    font-size: 10px;
+    letter-spacing: 200%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+}
+.about {
+  overflow: hidden;
+  color: #fff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 34px 14px 64px 14px;
+}
+.about-content img {
+  max-width: 570px;
+}
+.about-content div {
+  flex: 1;
+}
+
+.about-description {
+  max-width: 80%;
+}
+.about-description h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+.about-description p {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 14px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-content {
+    flex-direction: column;
+  }
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 84%;
+    margin: 0 auto;
+  }
+  .about-description p {
+    font-weight: 100;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 150%;
+  }
+}
+.services {
+  background-color: #edeaef;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px 0px 14px;
+}
+
+.services-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 3rem;
+}
+
+.services-content p {
+  text-align: center;
+  line-height: 150%;
+  font-weight: 300;
+  max-width: 1024px;
+  margin-bottom: 3rem;
+}
+
+.haircuts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0px 44px 0px 44px;
+}
+
+.haircut {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1), -6px -6px 6px 6px rgb(255, 255, 255);
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+.haircut:hover {
+  animation: anime_haircut 0.3s infinite alternate;
+}
+
+@keyframes anime_haircut {
+  to {
+    box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.2), -6px -6px 6px 6px rgb(255, 255, 255);
+  }
+}
+.haircut img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.2s;
+}
+
+.haircut img:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.haircut-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.haircut-info button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: #D94140;
+  border: none;
+  box-shadow: 0px 0px 6px 0.1px #D94140, 0px 0px 6px 0.1px #D94140;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.haircut-info button:hover {
+  animation: anime_button_info 0.3s infinite alternate;
+}
+
+@keyframes anime_button_info {
+  to {
+    box-shadow: 0px 0px 6px 2px #D94140, 0px 0px 6px 2px #D94140;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .services-content p {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .services {
+    padding-inline: 0;
+  }
+  .haircut img {
+    min-width: 220px;
+  }
+  .haircut-info strong {
+    font-size: 12px;
+    text-wrap: nowrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  .services-content p {
+    max-width: 480px;
+  }
+  .haircuts {
+    flex-direction: column;
+  }
+  .haircut-info strong {
+    font-size: 16px;
+  }
+  .haircut-info button {
+    font-size: 14px;
+  }
+}
+.footer_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 14px;
+  background-color: #edeaef;
+  color: #232224;
+}
+
+.footer_title h2 {
+  font-size: 32px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-direction: column;
+  padding: 48px 0px 36px 0px;
+}
+
+.footer_icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.footer_icons i {
+  color: #fff;
+}
+
+.footer_description p {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 150%;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer_description p {
+    font-size: 8px;
+  }
+}
+.btn_whatsapp {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border: none;
+  z-index: 99;
+}
+.btn_whatsapp img {
+  border: none;
+  border-radius: 50%;
+  max-width: 54px;
+  transition: transform 0.2s ease-out;
+}
+
+.btn_whatsapp:hover img {
+  transform: scale(1.1);
+}
+
+.tooltip_text {
+  position: fixed;
+  bottom: 26px;
+  right: 84px;
+  padding: 12px;
+  border: none;
+  border-radius: 16px;
+  background-color: rgb(0, 0, 0);
+  color: #edeaef;
+  font-size: 12px;
+  font-style: normal;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.btn_whatsapp:hover .tooltip_text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .btn_whatsapp {
+    bottom: 4px;
+    right: 10px;
+  }
+  .btn_whatsapp img {
+    max-width: 36px;
+  }
+  .tooltip_text {
+    position: fixed;
+    bottom: 12px;
+    right: 84px;
+  }
+}
+/*
+// MOBILE SCREEN -> IPAD PRO OU TABLET PRO
+@media screen and (max-width: 1024px){
+  //
+}
+
+// MOBILE SCREEN -> IPAD AIR 
+@media screen and (max-width: 960px){
+  //
+}
+
+// MOBILE SCREEN -> IPAD OU TABLET
+@media screen and (max-width: 768px){
+  //
+}
+
+// MOBILE SCREEN -> IPHONE
+@media screen and (max-width: 480px){
+  //
+}
+*/
+body {
+  font-family: "Sora", sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #06121E;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  font-family: "sora", sans-serif;
+}
+
+svg {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

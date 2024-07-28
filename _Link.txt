@@ -1,0 +1,8 @@
+Site      -> https://sujeitoprogramador.com/landing-page/
+API       -> https://api.whatsapp.com/send?phone=27995124969&text=Quero%20fazer%20um%20agendamento
+Animações -> eshttps://michalsnik.github.io/aos/
+
+
+Criando landing page completa do ZERO - part 01 (HTML, CSS, SASS)
+  https://www.youtube.com/watch?v=Fzc_dnqD-V0&t=179s
+
